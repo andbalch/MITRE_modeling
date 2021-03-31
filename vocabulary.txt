@@ -4,11 +4,6 @@
     2: (None, ['[EOA]']),
     3: (None, ['[SOB]']),
     4: (None, ['[EOB]']),
-    5: ('\{', ['{']),
-    6: ('\}', ['}']),
-    7: (',\s', [', ']),
-    8: ('\[', ['[']),
-    9: ('\]', [']']),
     
     10: ('"class": "SYSCALL"', ['"class": "SYSCALL"']),
     11: ('"class": "BINDER"', ['"class": "BINDER"']),
@@ -79,8 +74,6 @@
     74: ('\.appwidget\.IAppWidgetService"', ['.appwidget.IAppWidgetService"']),
     75: ('\.textservice\.ISpellCheckerSession"', ['.textservice.ISpellCheckerSession"']),
     76: ('\.accounts\.IAccountManager"', ['.accounts.IAccountManager"']),
-
-    77: ('"low": ', ['"low": ']),
 
     78: ('"method_name": "com\.android\.internal\.telephony\.IPhoneSubInfo\.getDeviceId\(\)"', ['"method_name": "com.android.internal.telephony.IPhoneSubInfo.getDeviceId()"']),
     79: ('"method_name": "com\.android\.internal\.telephony\.IPhoneSubInfo\.getSubscriberId\(\)"', ['"method_name": "com.android.internal.telephony.IPhoneSubInfo.getSubscriberId()"']),
