@@ -1,3 +1,2 @@
 Current sample: 
 ('0b160334f0d0f068eb89c409ba3e0261ef8616d76309db97a85bd1b5a74cd1ed', 'riskware') 
-Error hashes: 
