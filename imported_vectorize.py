@@ -41,7 +41,6 @@ def vectorize(sample, regex_pattern, parent_dir):
         write_resume.write('Current sample: \n')
         write_resume.write('{0} \n'.format(sample))
     sample_hash, sample_class = sample
-    start_sample = time.time()
     with open(parent_dir + sample_class + '\\' + sample_hash + '\\sample_for_analysis.apk.json') as sample_path:
         try:
             sample_behaviors = json.load(sample_path)['behaviors']['dynamic']['host']
@@ -50,44 +49,24 @@ def vectorize(sample, regex_pattern, parent_dir):
                 write_resume.write(sample_hash)
             print("Error loading hash {0}".format(sample_hash))
             return None
-    load_end = time.time()
-
-    sort_start = time.time()
     sorted_behaviors = sort_behaviors(sample_behaviors)
-    sort_end = time.time()
     sample_behaviors = []
     # lists are cleared after useage to preserve memory resources
 
-    strip_start = time.time()
     stripped_behaviors = strip_unused_keys(sorted_behaviors, ['arguments', 'blob', 'parameters', 'id', 'xref', 'ts', 'tid', 'interfaceGroup', 'methodName'])
-    strip_end = time.time()
     sorted_behaviors = []
 
-    cast_str_start = time.time()
     string_behaviors = [json.dumps(behavior) for behavior in stripped_behaviors] 
-    cast_str_end = time.time()
     stripped_behaviors = []
 
-    vector_start = time.time()
-    token_times = []
-    append_times = []
     vectorized_sample = [1]
     for behavior in string_behaviors:
-        token_start = time.time()
         append_to_vector = tokenize(behavior, regex_pattern)
-        token_end = time.time()
-        token_times.append(token_end-token_start)
-        append_start = time.time()
         for scalar in append_to_vector:
             vectorized_sample.append(scalar)
-        append_end = time.time()
-        append_times.append(append_end-append_start)
     vectorized_sample.append(2)
-    vector_end = time.time()
 
-    write_start = time.time()
     # with open("vectorized_samples/" + sample_class + "/" + sample_hash + ".npy", 'wb') as vector_path:
     #     np.save(vector_path, vectorized_sample, allow_pickle = False)
-    end_sample = time.time()
 
     return None
