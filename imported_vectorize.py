@@ -2,6 +2,7 @@ import time
 import re
 import json
 from statistics import mean
+import numpy as np
 
 def sort_behaviors(raw_behaviors):
     raw_behaviors.sort(key = lambda x: x['low'][0]['id'])
@@ -66,7 +67,7 @@ def vectorize(sample, regex_pattern, parent_dir):
             vectorized_sample.append(scalar)
     vectorized_sample.append(2)
 
-    # with open("vectorized_samples/" + sample_class + "/" + sample_hash + ".npy", 'wb') as vector_path:
-    #     np.save(vector_path, vectorized_sample, allow_pickle = False)
+    with open("vectorized_samples/" + sample_class + "/" + sample_hash + ".npy", 'wb') as vector_path:
+        np.save(vector_path, vectorized_sample, allow_pickle = False)
 
     return None
