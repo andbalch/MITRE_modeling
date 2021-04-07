@@ -1,2 +1,2 @@
 Current sample: 
-('c01e54bfe7e6f90227158516d49796abd83bc6dbbca6f4dbd8d17a02a7b1f822', 'banking') 
+('8ec511aae65032914aff1f58104d807c3280cdd6010eb94bbcc5693c4664ef7c', 'adware') 
