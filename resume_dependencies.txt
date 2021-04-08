@@ -1,2 +1,2 @@
 Current sample: 
-('8ec511aae65032914aff1f58104d807c3280cdd6010eb94bbcc5693c4664ef7c', 'adware') 
+('0588209d36ec742b4763f10af61ae6db31314cac55f8f2d6141f8b6f3f187faf', 'riskware') 
