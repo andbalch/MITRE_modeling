@@ -1,2 +1,2 @@
 Current sample: 
-('0588209d36ec742b4763f10af61ae6db31314cac55f8f2d6141f8b6f3f187faf', 'riskware') 
+('3cc6b466ba55cd07716f2ce8dfa171a6e6075181c40fc1c638715579ddb0ab1b', 'sms') 
